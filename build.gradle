@@ -1,18 +1,16 @@
 allprojects {
-    apply plugin: 'java'
-    apply plugin: 'maven-publish'
+    apply(plugin: "java")
+    apply(plugin: "maven-publish")
 
-    group 'io.ran'
+    group = "io.ran"
 
     jar {
         manifest {
-            attributes(
-                    'Implementation-Title': project.name,
-                    'Implementation-Version': project.version,
-                    'Implementation-Vendor-Id': project.group,
-                    'Implementation-Vendor': 'Persequor ApS',
-                    'Created-By': "Gradle $project.gradle.gradleVersion"
-            )
+            attributes["Implementation-Title"] = project.name
+            attributes["Implementation-Version"] = project.version
+            attributes["Implementation-Vendor-Id"] = project.group
+            attributes["Implementation-Vendor"] = "Persequor Aps"
+            attributes["Created-By"] = "Gradle $project.gradle.gradleVersion"
         }
     }
 
@@ -29,10 +27,11 @@ allprojects {
         }
         publications {
             gpr(MavenPublication) {
-                from(components.java)
+                from(components["java"])
             }
         }
     }
-    sourceCompatibility = '1.8'
+    java.sourceCompatibility = "1.8"
+    java.targetCompatibility = "1.8"
 
 }

@@ -1,8 +1,8 @@
 plugins {
-    id 'java'
+    id("java")
 }
 
-description = 'automapper-core'
+description = "automapper-core"
 
 repositories {
     mavenCentral()
@@ -10,14 +10,14 @@ repositories {
 
 
 dependencies {
-    testImplementation 'org.mockito:mockito-core:3.1.0'
+    testImplementation("org.mockito:mockito-core:3.1.0")
 
-    testImplementation group: 'junit', name: 'junit', version: '4.13.1'
-    testImplementation group: 'com.google.inject', name: 'guice', version: '4.2.3'
-    testImplementation 'com.google.code.gson:gson:2.9.0'
-    implementation 'javax.inject:javax.inject:1'
-    implementation group: 'org.ow2.asm', name: 'asm', version: '9.2'
-    implementation group: 'org.ow2.asm', name: 'asm-util', version: '9.2'
-    implementation 'cglib:cglib:3.3.0'
+    testImplementation("junit:junit:4.13.1")
+    testImplementation("com.google.inject:guice:6.0.0")
+    testImplementation("com.google.code.gson:gson:2.9.0")
+    implementation("javax.inject:javax.inject:1")
+    implementation("org.ow2.asm:asm:9.2")
+    implementation("org.ow2.asm:asm-util:9.2")
+    implementation("cglib:cglib:3.3.0")
 
 }
