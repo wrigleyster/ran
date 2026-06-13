@@ -725,8 +725,8 @@ public class ClazzTest {
 			assertClazz(iStringHolderHolder, IStringHolderHolder.class, g(StringHolder.class, String.class));
 		}
 		{
-			Clazz<?> eyeStringHolderHolder = Clazz.of(iStringHolderHolder.class);
-			assertClazz(eyeStringHolderHolder, iStringHolderHolder.class, g(IStringHolder.class, String.class));
+			Clazz<?> eyeStringHolderHolder = Clazz.of(aStringHolderHolder.class);
+			assertClazz(eyeStringHolderHolder, aStringHolderHolder.class, g(IStringHolder.class, String.class));
 		}
 		{
 			Clazz<?> iiStringHolderHolder = Clazz.of(IiStringHolderHolder.class);
@@ -1067,7 +1067,7 @@ public class ClazzTest {
 	public interface IStringHolderHolder<T extends StringHolder> {}
 
 	@SuppressWarnings({"rawtypes", "unused"})
-	public static class iStringHolderHolder<T extends IStringHolder> {}
+	public static class aStringHolderHolder<T extends IStringHolder> {}
 
 	@SuppressWarnings({"rawtypes", "unused"})
 	public interface IiStringHolderHolder<T extends IStringHolder> {}
