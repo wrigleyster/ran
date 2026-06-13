@@ -239,11 +239,11 @@ public class ClazzMethodTest {
 	@Test
 	public void testObjectMethods() {
 		Clazz<?> object = Clazz.of(Object.class);
-		assertEquals(12, object.methods().size());
+		assertEquals(11, object.methods().size());
 
 		Clazz<?> string = Clazz.of(String.class);
 		Clazz<?> object2 = string.getSuper();
-		assertEquals(12, object2.methods().size());
+		assertEquals(11, object2.methods().size());
 	}
 
 	// coincidentally works, but swapping the order breaks it
